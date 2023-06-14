@@ -17,21 +17,21 @@
 
   <link rel="shortcut icon" href="/images/head/head.jpg" type="image/png" />
   <meta name="description" content="spark stand alone ha">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:title" content="spark stand alone ha">
-<meta property="og:url" content="http://example.com/spark%20stand%20alone%20ha.html">
+<meta property="og:url" content="http://example.com/2023/06/14/spark%20stand%20alone%20ha/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="spark stand alone ha">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/spark%20stand%20alone%20ha.htm/spark%20stand%20alone%20ha/p10.png">
-<meta property="og:image" content="http://example.com/spark%20stand%20alone%20ha.htm/spark%20stand%20alone%20ha/p11.png">
-<meta property="og:image" content="http://example.com/spark%20stand%20alone%20ha.htm/spark%20stand%20alone%20ha/p12.png">
-<meta property="og:image" content="http://example.com/spark%20stand%20alone%20ha.htm/spark%20stand%20alone%20ha/p13.png">
-<meta property="article:published_time" content="2023-06-14T00:37:33.170Z">
-<meta property="article:modified_time" content="2023-06-14T00:37:33.170Z">
+<meta property="og:image" content="http://example.com/2023/06/14/spark%20stand%20alone%20ha/p10.png">
+<meta property="og:image" content="http://example.com/2023/06/14/spark%20stand%20alone%20ha/p11.png">
+<meta property="og:image" content="http://example.com/2023/06/14/spark%20stand%20alone%20ha/p12.png">
+<meta property="og:image" content="http://example.com/2023/06/14/spark%20stand%20alone%20ha/p13.png">
+<meta property="article:published_time" content="2023-06-14T00:27:09.935Z">
+<meta property="article:modified_time" content="2023-06-14T00:43:48.173Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/spark%20stand%20alone%20ha.htm/spark%20stand%20alone%20ha/p10.png">
+<meta name="twitter:image" content="http://example.com/2023/06/14/spark%20stand%20alone%20ha/p10.png">
   <link rel="stylesheet" href="https://lib.baomitu.com/highlight.js/9.15.8/styles/atom-one-dark.min.css" crossorigin>
   <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css">
   <link rel="stylesheet" href="/lib/iconfont/iconfont.css">
@@ -40,7 +40,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1686703109038">
+  <link rel="stylesheet" href="/css/style.css?v=1686703464473">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -65,7 +65,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div class="nexmoe-count-item"><span>Articles</span>3 <div class="item-radius"></div><div class="item-radius item-right"></div> </div>
+        <div class="nexmoe-count-item"><span>Articles</span>4 <div class="item-radius"></div><div class="item-radius item-right"></div> </div>
         <div class="nexmoe-count-item"><span>Tags</span>0<div class="item-radius"></div><div class="item-radius item-right"></div></div>
         <div class="nexmoe-count-item"><span>Categories</span>0<div class="item-radius"></div><div class="item-radius item-right"></div></div>
     </div>
@@ -153,7 +153,7 @@
   <div class="nexmoe-widget-wrap">
     <h3 class="nexmoe-widget-title">Archive</h3>
     <div class="nexmoe-widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -211,7 +211,7 @@
         <article>
             <p>spark stand alone ha</p>
 <span id="more"></span>
-<p>（1）在spark-env.sh中, 删除: SPARK_MASTER_HOST&#x3D;node1，增加：<br><img data-fancybox="gallery" data-sizes="auto" data-src="/spark%20stand%20alone%20ha.htm/spark%20stand%20alone%20ha/p10.png" alt="spark on stand alone ha" class="lazyload"><br>将spark-env.sh分发到node2和node3上<br>scp spark-env.sh node2:&#x2F;export&#x2F;server&#x2F;spark&#x2F;conf&#x2F;<br>scp spark-env.sh node3:&#x2F;export&#x2F;server&#x2F;spark&#x2F;conf&#x2F;<br>停止当前StandAlone集群<br>sbin&#x2F;stop-all.sh<br>（2）启动集群<br>#在node1上 启动一个master 和全部worker<br>sbin&#x2F;start-all.sh<br>#注意, 下面命令在node2上执行<br>sbin&#x2F;start-master.sh<br>#在node2上启动一个备用的master进程<br><img data-fancybox="gallery" data-sizes="auto" data-src="/spark%20stand%20alone%20ha.htm/spark%20stand%20alone%20ha/p11.png" alt="spark stand alone ha" class="lazyload"><br><img data-fancybox="gallery" data-sizes="auto" data-src="/spark%20stand%20alone%20ha.htm/spark%20stand%20alone%20ha/p12.png" alt="spark stand alone ha" class="lazyload"><br>3）master主备切换<br>提交一个spark任务到当前alive master上：<br>bin&#x2F;spark-submit –master spark:&#x2F;&#x2F;node1:7077<br>&#x2F;export&#x2F;server&#x2F;spark&#x2F;examples&#x2F;src&#x2F;main&#x2F;python&#x2F;pi.py 1000<br><img data-fancybox="gallery" data-sizes="auto" data-src="/spark%20stand%20alone%20ha.htm/spark%20stand%20alone%20ha/p13.png" alt="spark stand alone ha" class="lazyload"></p>
+<p>（1）在spark-env.sh中, 删除: SPARK_MASTER_HOST&#x3D;node1，增加：<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/spark%20stand%20alone%20ha/p10.png" alt="spark stand alone ha" class="lazyload"><br>将spark-env.sh分发到node2和node3上<br>scp spark-env.sh node2:&#x2F;export&#x2F;server&#x2F;spark&#x2F;conf&#x2F;<br>scp spark-env.sh node3:&#x2F;export&#x2F;server&#x2F;spark&#x2F;conf&#x2F;<br>停止当前StandAlone集群<br>sbin&#x2F;stop-all.sh<br>（2）启动集群<br>#在node1上 启动一个master 和全部worker<br>sbin&#x2F;start-all.sh<br>#注意, 下面命令在node2上执行<br>sbin&#x2F;start-master.sh<br>#在node2上启动一个备用的master进程<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/spark%20stand%20alone%20ha/p11.png" alt="spark stand alone ha" class="lazyload"><br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/spark%20stand%20alone%20ha/p12.png" alt="spark stand alone ha" class="lazyload"><br>3）master主备切换<br>提交一个spark任务到当前alive master上：<br>bin&#x2F;spark-submit –master spark:&#x2F;&#x2F;node1:7077<br>&#x2F;export&#x2F;server&#x2F;spark&#x2F;examples&#x2F;src&#x2F;main&#x2F;python&#x2F;pi.py 1000<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/spark%20stand%20alone%20ha/p13.png" alt="spark stand alone ha" class="lazyload"></p>
 
         </article>
 
@@ -220,7 +220,7 @@
   <div class="nexmoe-post-copyright">
     <strong>Author：</strong>John Doe<br>
     
-    <strong>Link：</strong><a href="http://example.com/spark%20stand%20alone%20ha.html" title="http:&#x2F;&#x2F;example.com&#x2F;spark%20stand%20alone%20ha.html" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;spark%20stand%20alone%20ha.html</a><br>
+    <strong>Link：</strong><a href="http://example.com/2023/06/14/spark%20stand%20alone%20ha/" title="http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;06&#x2F;14&#x2F;spark%20stand%20alone%20ha&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;06&#x2F;14&#x2F;spark%20stand%20alone%20ha&#x2F;</a><br>
 
     
       <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
@@ -964,7 +964,7 @@
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1686703109040"></script>
+<script src="/js/app.js?v=1686703464476"></script>
 
 <script src="https://lib.baomitu.com/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 <script>
@@ -995,11 +995,11 @@
 
 <link rel="stylesheet" href="/lib/codeBlock/matery.css">
 
+<script src="/js/webapp.js"></script>
+
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
 <script src="/js/search.js"></script>
-
-<script src="/js/webapp.js"></script>
 <!-- hexo injector body_end end --></body>
 </html>
 
