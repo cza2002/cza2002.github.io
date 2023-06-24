@@ -5,7 +5,7 @@
 <head>
   
   <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
-  <title>docker - Hexo</title>
+  <title>kafka - Hexo</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -16,23 +16,24 @@
     <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
 
   <link rel="shortcut icon" href="/images/head/head.jpg" type="image/png" />
-  <meta name="description" content="docker">
+  <meta name="description" content="kafka">
 <meta property="og:type" content="article">
-<meta property="og:title" content="docker">
-<meta property="og:url" content="http://example.com/2023/06/14/docker/index.html">
+<meta property="og:title" content="kafka">
+<meta property="og:url" content="http://example.com/2023/06/24/kafka/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="docker">
+<meta property="og:description" content="kafka">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2023/06/14/docker/p32.png">
-<meta property="og:image" content="http://example.com/2023/06/14/docker/p33.png">
-<meta property="og:image" content="http://example.com/2023/06/14/docker/p34.png">
-<meta property="og:image" content="http://example.com/2023/06/14/docker/p35.png">
-<meta property="og:image" content="http://example.com/2023/06/14/docker/p36.png">
-<meta property="article:published_time" content="2023-06-14T01:40:08.087Z">
-<meta property="article:modified_time" content="2023-06-14T01:44:41.843Z">
+<meta property="og:image" content="http://example.com/2023/06/24/kafka/k1.png">
+<meta property="og:image" content="http://example.com/2023/06/24/kafka/k2.png">
+<meta property="og:image" content="http://example.com/2023/06/24/kafka/k3.png">
+<meta property="og:image" content="http://example.com/2023/06/24/kafka/k4.png">
+<meta property="og:image" content="http://example.com/2023/06/24/kafka/k5.png">
+<meta property="og:image" content="http://example.com/2023/06/24/kafka/k6.png">
+<meta property="article:published_time" content="2023-06-24T06:29:36.358Z">
+<meta property="article:modified_time" content="2023-06-24T06:37:04.772Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2023/06/14/docker/p32.png">
+<meta name="twitter:image" content="http://example.com/2023/06/24/kafka/k1.png">
   <link rel="stylesheet" href="https://lib.baomitu.com/highlight.js/9.15.8/styles/atom-one-dark.min.css" crossorigin>
   <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css">
   <link rel="stylesheet" href="/lib/iconfont/iconfont.css">
@@ -41,7 +42,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1687588644469">
+  <link rel="stylesheet" href="/css/style.css?v=1687588644466">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -194,14 +195,14 @@
     
         <div class="nexmoe-post-cover"
              style="padding-bottom: 24.305555555555554%;">
-            <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="docker" class="lazyload">
-            <h1>docker</h1>
+            <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="kafka" class="lazyload">
+            <h1>kafka</h1>
         </div>
     
 
         <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2023年06月14日</a>
-    <a><i class="nexmoefont icon-areachart"></i>236 字</a>
+    <a><i class="nexmoefont icon-calendar-fill"></i>2023年06月24日</a>
+    <a><i class="nexmoefont icon-areachart"></i>203 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
 </div>
 
@@ -210,17 +211,9 @@
         </div>
 
         <article>
-            <p>docker</p>
+            <p>kafka</p>
 <span id="more"></span>
-<p>1、在安装docker之前，先初始化机器环境，如果之前安装过旧版本的docker，应该先使用命令进行卸载。<br>yum remove docker <br>                  docker-client <br>                  docker-client-latest <br>                  docker-common <br>                  docker-latest <br>                  docker-latest-logrotate <br>                  docker-logrotate <br>                  docker-selinux <br>                  docker-engine-selinux <br>                  docker-engine <br>                  docker-ce<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/docker/p32.png" alt="docker" class="lazyload"><br>2.Yum源配置<br>备份配置文件<br>mv &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo.backup</p>
-<p>wget -O &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/repo/Centos-7.repo">http://mirrors.aliyun.com/repo/Centos-7.repo</a></p>
-<p>wget -O &#x2F;etc&#x2F;yum.repos.d&#x2F;epel.repo <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/repo/epel-7.repo">http://mirrors.aliyun.com/repo/epel-7.repo</a></p>
-<p>yum clean all<br>yum makecache<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/docker/p33.png" alt="docker" class="lazyload"><br>3.docker安装<br>（1）需要虚拟机连网，安装yum工具<br>yum install -y yum-utils <br>           device-mapper-persistent-data <br>           lvm2 –skip-broken<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/docker/p34.png" alt="docker" class="lazyload"></p>
-<p>2.更新本地镜像源<br>um-config-manager <br>    –add-repo <br>    <a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo">https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</a></p>
-<p>sed -i ‘s&#x2F;download.docker.com&#x2F;mirrors.aliyun.com/docker-ce&#x2F;g’ &#x2F;etc&#x2F;yum.repos.d&#x2F;docker-ce.repo</p>
-<p>yum makecache fast<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/docker/p35.png" alt="docker" class="lazyload"></p>
-<p>3）docker安装<br>输入命令：yum install -y docker-ce<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/docker/p36.png" alt="docker" class="lazyload"></p>
-<p>Docker安装完毕</p>
+<p>一、安装kafka集群<br>（1）上传安装包并解压<br>tar -zxvf kafka_2.12-2.4.1.tgz &#x2F;export&#x2F;server<br>（2）修改配置文件<br>#进入配置文件目录<br>cd &#x2F;export&#x2F;server&#x2F;kafka&#x2F;config<br>#编辑配置文件<br>vi server.properties<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/kafka/k1.png" alt="kafka" class="lazyload"><br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/kafka/k2.png" alt="kafka" class="lazyload"><br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/kafka/k3.png" alt="kafka" class="lazyload"><br>（3）分发安装包并配置环境变量<br>scp -r &#x2F;export&#x2F;server&#x2F; kafka_2.12-2.4.1&#x2F; root@node2:&#x2F;export&#x2F;server&#x2F;<br>scp -r &#x2F;export&#x2F;server&#x2F; kafka_2.12-2.4.1&#x2F; root@node3:&#x2F;export&#x2F;server&#x2F;<br>#配置环境变量<br>vi &#x2F;etc&#x2F;profile<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/kafka/k4.png" alt="kafka" class="lazyload"><br>配置完重新加载环境变量：<br>source &#x2F;etc&#x2F;profile<br>将profile文件分发到node2和node3上：<br>scp &#x2F;etc&#x2F;profile&#x2F; root@node2:&#x2F;etc&#x2F;<br>scp &#x2F;etc&#x2F;profile&#x2F; root@node3:&#x2F;etc&#x2F;<br>#在node2和node3上修改配置文件<br>broker.id&#x3D;1<br>broker.id&#x3D;2<br>二、编写kafka一键启停脚本<br>Vi kafkaall.sh<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/kafka/k5.png" alt="kafka" class="lazyload"><br>启动测试：<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/kafka/k6.png" alt="kafka" class="lazyload"></p>
 
         </article>
 
@@ -229,7 +222,7 @@
   <div class="nexmoe-post-copyright">
     <strong>Author：</strong>John Doe<br>
     
-    <strong>Link：</strong><a href="http://example.com/2023/06/14/docker/" title="http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;06&#x2F;14&#x2F;docker&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;06&#x2F;14&#x2F;docker&#x2F;</a><br>
+    <strong>Link：</strong><a href="http://example.com/2023/06/24/kafka/" title="http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;06&#x2F;24&#x2F;kafka&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;06&#x2F;24&#x2F;kafka&#x2F;</a><br>
 
     
       <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
@@ -973,7 +966,7 @@
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1687588644470"></script>
+<script src="/js/app.js?v=1687588644467"></script>
 
 <script src="https://lib.baomitu.com/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 <script>
