@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  
+  <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
+  <title>sqoop - Hexo</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  
+  
+
+    <!-- Site Verification -->
+    <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
+
+  <link rel="shortcut icon" href="/images/head/head.jpg" type="image/png" />
+  <meta name="description" content="sqoop">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sqoop">
+<meta property="og:url" content="http://example.com/2023/06/24/sqoop/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="sqoop">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k28.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k29.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k30.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k31.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k32.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k33.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k34.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k35.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k36.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k37.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k38.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k39.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k40.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k41.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k42.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k43.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k44.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k45.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k46.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k47.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k48.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k50.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k51.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k52.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k53.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k54.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k55.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k56.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k57.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k58.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k59.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k60.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k61.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k62.png">
+<meta property="og:image" content="http://example.com/2023/06/24/sqoop/k63.png">
+<meta property="article:published_time" content="2023-06-24T06:56:58.543Z">
+<meta property="article:modified_time" content="2023-06-24T08:24:48.325Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/06/24/sqoop/k28.png">
+  <link rel="stylesheet" href="https://lib.baomitu.com/highlight.js/9.15.8/styles/atom-one-dark.min.css" crossorigin>
+  <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css">
+  <link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+  <link rel="stylesheet" href="/lib/fancybox/css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="https://lib.baomitu.com/justifiedGallery/3.8.1/css/justifiedGallery.min.css">
+  
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
+  
+  <link rel="stylesheet" href="/css/style.css?v=1687603625093">
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(/images/background/xiaomai.jpg)"></div>
+    <div class="nexmoe-small" style="background-image: url(/images/background/lihui.png)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="John Doe" class="mdui-btn mdui-btn-icon"><img src="/images/head/head.jpg" alt="John Doe"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="John Doe">
+            <img src="/images/head/head.jpg" alt="John Doe" alt="John Doe">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div class="nexmoe-count-item"><span>Articles</span>13 <div class="item-radius"></div><div class="item-radius item-right"></div> </div>
+        <div class="nexmoe-count-item"><span>Tags</span>0<div class="item-radius"></div><div class="item-radius item-right"></div></div>
+        <div class="nexmoe-count-item"><span>Categories</span>0<div class="item-radius"></div><div class="item-radius item-right"></div></div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-meishi"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-hanbao1"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于糖糖">
+            <i class="mdui-list-item-icon nexmoefont icon-jiubei1"></i>
+            <div class="mdui-list-item-content">
+                关于糖糖
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/friend.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-cola"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/download.html" title="下载中心">
+            <i class="mdui-list-item-icon nexmoefont icon-tangguo"></i>
+            <div class="mdui-list-item-content">
+                下载中心
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+  
+  
+<!-- 站内搜索 -->
+
+<div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search" >
+        <form id="search-form">
+            <label><input type="text" id="local-search-input" name="q" results="0" placeholder="站内搜索" class="input form-control" autocomplete="off" autocorrect="off"/></label>
+            <!-- 清空/重置搜索框 -->
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+        </form>
+    </div>
+    <div id="local-search-result"></div> <!-- 搜索结果区 -->
+    <!-- <p class='no-result'></p> 无匹配时显示，注意在 CSS 中设置默认隐藏 -->
+</div>
+
+
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="http://wpa.qq.com/msgrd?v=3&uin=2120252100&site=qq&menu=yes" target="_blank" mdui-tooltip="{content: 'QQ'}" style="color: rgb(64, 196, 255);background-color: rgba(64, 196, 255, .1);">
+            <i class="nexmoefont icon-QQ"></i>
+        </a><a class="mdui-ripple" href="mailto:tangyuxian@vip.qq.com" target="_blank" mdui-tooltip="{content: 'mail'}" style="color: rgb(249,8,8);background-color: rgba(249,8,8,.1);">
+            <i class="nexmoefont icon-mail-fill"></i>
+        </a><a class="mdui-ripple" href="https://blog.csdn.net/qq_40621378?type=blog" target="_blank" mdui-tooltip="{content: 'CSDN'}" style="color: rgb(199,29,35);background-color: rgba(199,29,35,.1);">
+            <i class="nexmoefont icon-csdn"></i>
+        </a><a class="mdui-ripple" href="https://www.cnblogs.com/lovetangyuxian/" target="_blank" mdui-tooltip="{content: '博客园'}" style="color: rgb(66, 214, 29);background-color: rgba(66, 214, 29, .1);">
+            <i class="nexmoefont icon-bokeyuan"></i>
+        </a><a class="mdui-ripple" href="https://github.com/tangyuxian/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a><a class="mdui-ripple" href="https://gitee.com/tangyuxian" target="_blank" mdui-tooltip="{content: 'gitee'}" style="color: rgb(255, 255, 255);background-color: rgb(199,29,35);">
+            <i class="nexmoefont icon-mayun"></i>
+        </a>
+    </div>
+</div>
+  
+  
+
+  
+  
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Archive</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">13</span></li></ul>
+    </div>
+  </div>
+
+
+<style>
+.nexmoe-widget .archive-list-count{
+	position : absolute;
+	right: 15px;
+	top:9px;
+	color: #DDD;
+}
+</style>
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2023 John Doe
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/tangyuxian/hexo-theme-tangyuxian" target="_blank">Tangyuxian</a><br/>
+        <a href="http://beian.miit.gov.cn" target="_blank">辽ICP备2021002341号</a><br/>
+        
+        <div style="font-size: 12px">
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            本站总访问量  <a id="busuanzi_value_site_pv"></a> 次<br />
+            本站访客数<a id="busuanzi_value_site_uv"></a>人次
+        </div>
+        
+        
+    </div>
+
+</div><!-- .nexmoe-drawer -->
+
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    
+        <div class="nexmoe-post-cover"
+             style="padding-bottom: 24.305555555555554%;">
+            <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="sqoop" class="lazyload">
+            <h1>sqoop</h1>
+        </div>
+    
+
+        <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2023年06月24日</a>
+    <a><i class="nexmoefont icon-areachart"></i>2k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 10 分钟</a>
+</div>
+
+        <div class="nexmoe-post-right">
+            
+        </div>
+
+        <article>
+            <p>sqoop</p>
+<span id="more"></span>
+<p>Sqoop是一款开源的工具，主要用于在Hadoop(Hive)与传统的数据库(mysql、postgresql…)间进行数据的传递，可以将一个关系型数据库(例如 : MySQL ,Oracle ,Postgres等)中的数据导进到Hadoop的HDFS中，也可以将HDFS的数据导进到关系型数据库中。Sqoop工作机制是将导入或导出命令翻译成mapreduce程序<code>**来实现。在翻译出的mapreduce中主要是对inputformat和outputformat进行定制。 1.下载解压tar -zxvf sqoop-1.4.7.bin__hadoop-2.6.0.tar.gz -C /opt/module/ 修改名称： cd /opt/module mv sqoop-1.4.7.bin__hadoop-2.6.0/ sqoop-1.4.7 2.配置文件修改： 将其写入配置文件中，保存 vim /etc/profile 将#SQOOP_HOME export SQOOP_HOME=/export/server/sqoop export PATH=$PATH:$SQOOP_HOME/bin ![sqoop](sqoop/k22.png) 3.配置sqoop环境变量文件 1.切换到 Sqoop 配置文件目录 cd $SQOOP_HOME/conf 2.复制 Sqoop 环境变量模板文件 cp sqoop-env-template.sh sqoop-env.sh 3. .编辑文件，指定相关路径 vi sqoop-env.sh ![sqoop](sqoop/k23.png) ![sqoop](sqoop/k24.png) 4.MY SQL驱动 拷贝 MySQL 驱动到 Sqoop 中的 lib 目录中 cp /opt/software/mysql-connector-java-5.1.37-bin.jar $SQOOP_HOME/lib 测试MySQL连通性： ![sqoop](sqoop/k25.png) 测试成功！ 5.拷贝Hive文件 为了后续方便操作 Hive，我们需要将 Hive 的驱动放入 Sqoop 的 lib 目录中 cp hive-3.1.2/lib/hive-common-3.1.2.jar sqoop-1.4.7/lib/ 6.验证 输入sqoop  version，出现如下版本信息表示安装成功 ![sqoop](sqoop/k26.png) 测试功能是否可以正常使用： 展示 MySQL 中 sys 库下的所有表。 sqoop list-tables \ --connect jdbc:mysql://localhost:3306/sys \ --username root \ --password 000000 ![sqoop](sqoop/k27.png) 查出表数据并且无报错且正常，安装完毕。 7.数据导入： 在mysql中创建数据库userdb</code>，然后执行参考资料中的sql脚本：<br>创建三张表: emp雇员表emp_add&#96;雇员地址表emp_conn雇员联系表。<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k28.png" alt="sqoop" class="lazyload"><br>下面的命令用于从MySQL数据库服务器中的emp表导入HDFS。<br>#example1-mysql-hdfs-start bin&#x2F;sqoop import \<br>–connect jdbc:mysql:&#x2F;&#x2F;node1:3306&#x2F;userdb \<br>–username root \<br>–password hadoop \<br>–delete-target-dir \<br>–target-dir &#x2F;sqoop&#x2F;sqoopresult \<br>–table emp –m 1<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k29.png" alt="sqoop" class="lazyload"><br>#example2-mysql-hdfs-terminated<br>bin&#x2F;sqoop import \<br>–connect jdbc:mysql:&#x2F;&#x2F;node1:3306&#x2F;userdb \<br>–username root \<br>–password hadoop \<br>–target-dir &#x2F;sqoop&#x2F;sqoopresult2 \<br>–fields-terminated-by ‘\t’ \<br>–table emp –m 1<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k30.png" alt="sqoop" class="lazyload"><br>#example3-mysql-hdfs-split<br>bin&#x2F;sqoop import <br>–connect jdbc:mysql:&#x2F;&#x2F;node1:3306&#x2F;userdb <br>–username root <br>–password hadoop <br>–target-dir &#x2F;sqoop&#x2F;sqoopresult3 <br>–fields-terminated-by ‘\t’ <br>–split-by id <br>–table emp –m 2<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k31.png" alt="sqoop" class="lazyload"><br>8.全量导入mysql表数据到HIVE<br>在执行MapReduce任务的时候<br>先会将MySQL的数据导出来并在HDFS上找个目录临时存放，默认为：&#x2F;user&#x2F;用户名&#x2F;表名<br>然后再将数据加载到Hive中，加载完成后，会将临时存放的目录删除<br>1.数据准备<br>在MySQL所创建student数据库中，执行score.sql脚本导入数据<br>执行source &#x2F;root&#x2F;data&#x2F;score.sql导入score数据<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k32.png" alt="sqoop" class="lazyload"><br>2.编写脚本<br>编写脚本文件，并保存为MySQLToHive.conf<br>–fields-terminated-by 字段分割符<br>–lines-terminated-by 行分隔符<br>–hive-import 将表导入Hive<br>–hive-overwrite 覆盖写入表<br>–delete-target-dir 如果存在目标文件夹就删除<br>import<br>–connect<br>jdbc:mysql:&#x2F;&#x2F;master:3306&#x2F;student?useSSL&#x3D;false<br>–username<br>root<br>–password<br>123456<br>–table<br>score<br>–fields-terminated-by<br>“\t”<br>–lines-terminated-by<br>“\n”<br>–m<br>3<br>–split-by<br>student_id<br>–hive-import<br>–hive-overwrite<br>–create-hive-table<br>–hive-database<br>testsqoop<br>–hive-table<br>score<br>–delete-target-dir<br>3.执行脚本<br>执行脚本前需将HADOOP_CLASSPATH加入环境变量中<br>加入如下内容<br>export HADOOP_CLASSPATH&#x3D;$HADOOP_HOME&#x2F;lib:$HIVE_HOME&#x2F;lib&#x2F;*<br>并source &#x2F;etc&#x2F;profile<br>将hive-site.xml放入SQOOP_HOME&#x2F;conf&#x2F;<br>cp &#x2F;usr&#x2F;local&#x2F;soft&#x2F;hive-1.2.1&#x2F;conf&#x2F;hive-site.xml &#x2F;usr&#x2F;local&#x2F;soft&#x2F;sqoop-1.4.7&#x2F;conf&#x2F;<br>执行脚本<br>sqoop –options-file MySQLToHive.conf<br>进入hive查看导入的表数据，导入成功如图<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k33.png" alt="sqoop" class="lazyload"><br>9.导入表数据子集(where过滤)<br>#example6-mysql-hdfs-where<br>bin&#x2F;sqoop import \<br>–connect jdbc:mysql:&#x2F;&#x2F;node1:3306&#x2F;userdb \<br>–username root \<br>–password hadoop \<br>–where “city &#x3D;’sec-bad’” \<br>–target-dir &#x2F;sqoop&#x2F;wherequery \<br>–table emp_add –m 1<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k34.png" alt="sqoop" class="lazyload"><br>10.导入表数据子集(query查询)<br>#example7-mysql-hdfs-query<br>bin&#x2F;sqoop import \<br>–connect jdbc:mysql:&#x2F;&#x2F;node1:3306&#x2F;userdb \<br>–username root \ –password hadoop \<br>–target-dir &#x2F;sqoop&#x2F;wherequery2 \<br>–query ‘select id,name,deg from emp WHERE id&gt;1203 and $CONDITIONS’ \<br>–split-by id \<br>–fields-terminated-by ‘\001’ \<br>–m 2<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k35.png" alt="sqoop" class="lazyload"><br>11.Append模式增量导入<br>#example8-1-mysql-hdfs-append<br>bin&#x2F;sqoop import <br>–connect jdbc:mysql:&#x2F;&#x2F;node1:3306&#x2F;userdb <br>–username root <br>–password hadoop <br>–target-dir &#x2F;sqoop&#x2F;appendresult <br>–table emp –m 1<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k36.png" alt="sqoop" class="lazyload"><br>使用hdfs dfs -cat查看生成的数据文件，发现数据已经导入到hdfs中</p>
+<p>然后在mysql的emp表中插入2条数据:<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k37.png" alt="sqoop" class="lazyload"><br>12.增量的导入<br>bin&#x2F;sqoop import <br>–connect jdbc:mysql:&#x2F;&#x2F;node1:3306&#x2F;userdb <br>–username root <br>–password hadoop <br>–table emp –m 1 <br>–target-dir &#x2F;sqoop&#x2F;appendresult <br>–incremental append <br>–check-column id <br>–last-value 1205<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k38.png" alt="sqoop" class="lazyload"><br>13.Lastmodified模式增量导入<br>（1）首先创建一个customer表，指定一个时间戳字段：<br>create table customertest(id int,name varchar(20),last_mod timestamp default current_timestamp on update current_timestamp);<br>（2）插入记录:<br>insert into customertest(id,name) values(1,’neil’);<br>insert into customertest(id,name) values(2,’jack’);<br>insert into customertest(id,name) values(3,’martin’);<br>insert into customertest(id,name) values(4,’tony’);<br>insert into customertest(id,name) values(5,’eric’);<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k39.png" alt="sqoop" class="lazyload"><br>3）此时执行sqoop指令将数据导入hdfs:<br>#example9-1-mysql-hdfs-Lastmodified<br>bin&#x2F;sqoop import <br>–connect jdbc:mysql:&#x2F;&#x2F;node1:3306&#x2F;userdb <br>–username root <br>–password hadoop <br>–target-dir &#x2F;sqoop&#x2F;lastmodifiedresult <br>–table customertest –m 1<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k40.png" alt="sqoop" class="lazyload"><br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k41.png" alt="sqoop" class="lazyload"><br>再次插入一条数据进入customertest表<br>insert into customertest(id,name) values(6,’james’)<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k42.png" alt="sqoop" class="lazyload"><br>14.使用incremental的方式进行增量的导入:<br>bin&#x2F;sqoop import <br>–connect jdbc:mysql:&#x2F;&#x2F;node1:3306&#x2F;userdb <br>–username root <br>–password hadoop <br>–table customertest <br>–target-dir &#x2F;sqoop&#x2F;lastmodifiedresult <br>–check-column last_mod <br>–incremental lastmodified <br>–last-value “2019-05-28 18:42:06” <br>–m 1 <br>–append<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k43.png" alt="sqoop" class="lazyload"><br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k44.png" alt="sqoop" class="lazyload"><br>15.Lastmodified模式:append、merge-key<br>（1）我们去更新 id为1的name字段。<br>update customertest set name &#x3D; ‘Neil’ where id &#x3D; 1;<br>（2）执行如下指令，把id字段作为merge-key:<br>#example10-mysql-hdfs-merge-key<br>bin&#x2F;sqoop import <br>–connect jdbc:mysql:&#x2F;&#x2F;node1:3306&#x2F;userdb <br>–username root <br>–password hadoop <br>–table customertest <br>–target-dir &#x2F;sqoop&#x2F;lastmodifiedresult <br>–check-column last_mod <br>–incremental lastmodified <br>–last-value “2019-05-28 18:42:06” <br>–m 1 <br>–merge-key id<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k45.png" alt="sqoop" class="lazyload"><br>16.sqoop导出<br>（1）在HDFS文件系统中“&#x2F;emp&#x2F;”目录的下创建一个文件emp_data.txt：<br>mkdir &#x2F;export&#x2F;data&#x2F;sqoop-data&#x2F;emp&#x2F;<br>vim emp_data.txt<br>1201,gopal,manager,50000,TP<br>1202,manisha,preader,50000,TP<br>1203,kalil,php dev,30000,AC<br>1204,prasanth,php dev,30000,AC<br>1205,kranthi,admin,20000,TP<br>1206,satishp,grpdes,20000,GR<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k46.png" alt="sqoop" class="lazyload"><br>（2）手动创建mysql中的目标表<br>use userdb;<br>create table employee (<br>   id int not null primary key,<br>   name varchar(20),<br>   deg varchar(20),<br>   salary int,<br>   dept varchar(10));<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k47.png" alt="sqoop" class="lazyload"><br>3）执行导出命令<br>#example10-hdfs-mysql-export<br>bin&#x2F;sqoop export <br>–connect jdbc:mysql:&#x2F;&#x2F;node1:3306&#x2F;userdb <br>–username root <br>–password hadoop <br>–table employee1 <br>–columns id,name,deg,salary,dept <br>–export-dir &#x2F;sqoop&#x2F;emp_data&#x2F;<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k48.png" alt="sqoop" class="lazyload"><br>（4）更新导出 updateonly模式）<br>在HDFS文件系统中&#x2F;sqoop&#x2F;updateonly_1&#x2F;目录的下创建一个文件updateonly_1.txt<br>1201,gopal,manager,50000<br>1202,manisha,preader,50000<br>1203,kalil,php dev,30000<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k50.png" alt="sqoop" class="lazyload"><br>5）手动创建mysql中的目标表<br>USE userdb;<br>CREATE TABLE updateonly (<br>id INT NOT NULL PRIMARY KEY,<br>name VARCHAR(20),<br>deg VARCHAR(20),<br>salary INT);<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k51.png" alt="sqoop" class="lazyload"><br>（6）执行全部导出操作<br>#example11-1-hdfs-mysql-export-updateonly<br>bin&#x2F;sqoop export <br>–connect jdbc:mysql:&#x2F;&#x2F;node1:3306&#x2F;userdb <br>–username root <br>–password hadoop <br>–table updateonly <br>–export-dir &#x2F;sqoop&#x2F;updateonly_1&#x2F;<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k52.png" alt="sqoop" class="lazyload"><br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k53.png" alt="sqoop" class="lazyload"><br>（7）新增一个文件updateonly_2.txt：修改了前三条数据并且新增了一条记录<br>1201,gopal,manager,1212<br>1202,manisha,preader,1313<br>1203,kalil,php dev,1414<br>1204,allen,java,1515<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k54.png" alt="sqoop" class="lazyload"><br>8）执行更新导出<br>#example11-2-hdfs-mysql-export-updateonly<br>bin&#x2F;sqoop export <br>–connect jdbc:mysql:&#x2F;&#x2F;node1:3306&#x2F;userdb <br>–username root <br>–password hadoop <br>–table updateonly <br>–export-dir &#x2F;sqoop&#x2F;updateonly_2 <br>–update-key id <br>–update-mode updateonly<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k55.png" alt="sqoop" class="lazyload"><br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k56.png" alt="sqoop" class="lazyload"><br>（9）在HDFS &#x2F;sqoop&#x2F;allowinsert_1&#x2F;目录的下创建一个文件allowinsert_1.txt<br>1201,gopal,manager,50000<br>1202,manisha,preader,50000<br>1203,kalil,php dev,30000<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k57.png" alt="sqoop" class="lazyload"><br>10）手动创建mysql中的目标表<br>USE userdb;<br>CREATE TABLE allowinsert<br>(  id INT NOT NULL PRIMARY KEY,<br> name VARCHAR(20),<br>deg VARCHAR(20),<br> salary INT);<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k58.png" alt="sqoop" class="lazyload"><br>（11）执行全部导出操作<br>#example12-1-hdfs-mysql-export-allowinsert<br>bin&#x2F;sqoop export <br>–connect jdbc:mysql:&#x2F;&#x2F;node1:3306&#x2F;userdb <br>–username root <br>–password hadoop <br>–table allowinsert <br>–export-dir &#x2F;sqoop&#x2F;allowinsert_1&#x2F;<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k59.png" alt="sqoop" class="lazyload"><br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k60.png" alt="sqoop" class="lazyload"><br>（12）创建文件allowinsert_2.txt。修改前三条数据并且新增了一条记录。上传至 &#x2F;sqoop&#x2F;allowinsert_2&#x2F;目录下<br>1201,gopal,manager,1212<br>1202,manisha,preader,1313<br>1203,kalil,php dev,1414<br>1204,allen,java,1515<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k61.png" alt="sqoop" class="lazyload"><br>13）执行更新导出<br>#example12-2-hdfs-mysql-export-allowinsert<br>bin&#x2F;sqoop export <br>–connect jdbc:mysql:&#x2F;&#x2F;node1:3306&#x2F;userdb <br>–username root –password hadoop <br>–table allowinsert <br>–export-dir &#x2F;sqoop&#x2F;allowinsert_2&#x2F; <br>–update-key id <br>–update-mode allowinsert<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k62.png" alt="sqoop" class="lazyload"><br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/24/sqoop/k63.png" alt="sqoop" class="lazyload"></p>
+
+        </article>
+
+        
+            
+  <div class="nexmoe-post-copyright">
+    <strong>Author：</strong>John Doe<br>
+    
+    <strong>Link：</strong><a href="http://example.com/2023/06/24/sqoop/" title="http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;06&#x2F;24&#x2F;sqoop&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;06&#x2F;24&#x2F;sqoop&#x2F;</a><br>
+
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+    
+  </div>
+
+
+        
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+    
+</div>
+
+    <div class="nexmoe-post-footer">
+        <section class="nexmoe-comment">
+    <div class="valine"></div>
+<script src='https://lib.baomitu.com/valine/1.3.9/Valine.min.js'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: 'r5zxC0st0DDjPA9auXzMV7HY-gzGzoHsz',
+        appKey: '3bqCsovpyfTPHUzTHovd3V3V'
+    })
+</script>
+</section>
+    </div>
+</div>
+
+
+        <div class="nexmoe-post-right">
+          
+            <div class="nexmoe-fixed">
+              <div class="nexmoe-tool">
+                <a href="#" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+              </div>
+            </div>
+          
+        </div>
+    </div>
+  </div>
+  <div id="nexmoe-pendant">
+    <div class="nexmoe-drawer mdui-drawer nexmoe-pd" id="drawer">
+        
+            <div class="nexmoe-pd-item">
+                <div class="clock">
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="needle" id="hours"></div>
+        <div class="needle" id="minutes"></div>
+        <div class="needle" id="seconds"></div>
+        <div class="clock_logo">
+
+        </div>
+
+    </div>
+<style>
+    .clock {
+        background-color: #ffffff;
+        width: 70vw;
+        height: 70vw;
+        max-width: 70vh;
+        max-height: 70vh;
+        border: solid 2.8vw #242424;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        box-sizing: border-box;
+        box-shadow: 0 1.4vw 2.8vw rgba(0, 0, 0, 0.8);
+        zoom:0.2
+    }
+
+    .memory {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: center;
+    }
+
+    .memory:nth-child(1) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(0deg) translateY(-520%);
+    }
+
+    .memory:nth-child(2) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(6deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(3) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(12deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(4) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(18deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(5) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(24deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(6) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(30deg) translateY(-520%);
+    }
+
+    .memory:nth-child(7) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(36deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(8) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(42deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(9) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(48deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(10) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(54deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(11) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(60deg) translateY(-520%);
+    }
+
+    .memory:nth-child(12) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(66deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(13) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(72deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(14) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(78deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(15) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(84deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(16) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(90deg) translateY(-520%);
+    }
+
+    .memory:nth-child(17) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(96deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(18) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(102deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(19) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(108deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(20) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(114deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(21) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(120deg) translateY(-520%);
+    }
+
+    .memory:nth-child(22) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(126deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(23) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(132deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(24) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(138deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(25) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(144deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(26) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(150deg) translateY(-520%);
+    }
+
+    .memory:nth-child(27) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(156deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(28) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(162deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(29) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(168deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(30) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(174deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(31) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(180deg) translateY(-520%);
+    }
+
+    .memory:nth-child(32) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(186deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(33) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(192deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(34) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(198deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(35) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(204deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(36) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(210deg) translateY(-520%);
+    }
+
+    .memory:nth-child(37) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(216deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(38) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(222deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(39) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(228deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(40) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(234deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(41) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(240deg) translateY(-520%);
+    }
+
+    .memory:nth-child(42) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(246deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(43) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(252deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(44) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(258deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(45) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(264deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(46) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(270deg) translateY(-520%);
+    }
+
+    .memory:nth-child(47) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(276deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(48) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(282deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(49) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(288deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(50) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(294deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(51) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(300deg) translateY(-520%);
+    }
+
+    .memory:nth-child(52) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(306deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(53) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(312deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(54) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(318deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(55) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(324deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(56) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(330deg) translateY(-520%);
+    }
+
+    .memory:nth-child(57) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(336deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(58) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(342deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(59) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(348deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(60) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(354deg) translateY(-1461%);
+    }
+
+    .needle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: center;
+    }
+
+    .needle#hours {
+        background-color: #1f1f1f;
+        width: 4%;
+        height: 30%;
+        transform-origin: center 75%;
+        transform: translate(-50%, -75%);
+    }
+
+    .needle#hours.moving {
+        transition: transform 150ms ease-out;
+    }
+
+    .needle#hours:after {
+        content: '';
+        background-color: #1f1f1f;
+        width: 4vw;
+        height: 4vw;
+        max-width: 4vh;
+        max-height: 4vh;
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .needle#minutes {
+        background-color: #1f1f1f;
+        width: 2%;
+        height: 45%;
+        transform-origin: center 75%;
+        transform: translate(-50%, -75%);
+    }
+
+    .needle#minutes.moving {
+        transition: transform 150ms ease-out;
+    }
+
+    .needle#minutes:after {
+        content: '';
+        background-color: #1f1f1f;
+        width: 4vw;
+        height: 4vw;
+        max-width: 4vh;
+        max-height: 4vh;
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .needle#seconds {
+        background-color: #cb2f2f;
+        width: 1%;
+        height: 50%;
+        transform-origin: center 75%;
+        transform: translate(-50%, -75%);
+    }
+
+    .needle#seconds.moving {
+        transition: transform 150ms ease-out;
+    }
+
+    .needle#seconds:after {
+        content: '';
+        background-color: #cb2f2f;
+        width: 2.5vw;
+        height: 2.5vw;
+        max-width: 2.5vh;
+        max-height: 2.5vh;
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .clock_logo{
+        width: 10vw;
+        height: 10vw;
+        max-width: 10vh;
+        max-height: 10vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    @media (min-width: 100vh) {
+        .clock {
+            border: solid 2.8vh #242424;
+            box-shadow: 0 1.4vh 2.8vh rgba(0, 0, 0, 0.8);
+        }
+    }
+
+</style>
+
+
+
+
+
+            </div>
+        
+            <div class="nexmoe-pd-item">
+                <div class="qweather" >
+    <div id="he-plugin-standard"></div>
+    <div class="qweather-logo">
+
+    </div>
+
+</div>
+<style>
+    .qweather{
+        position: relative;
+    }
+    .qweather-logo{
+        position: absolute;
+        right: 0;
+        top: -15px;
+        width: 40px;
+        height: 40px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+</style>
+<script>
+  WIDGET = {
+    "CONFIG": {
+      "layout": "2",
+      "width": "260",
+      "height": "220",
+      "background": "5",
+      "dataColor": "e67249",
+      "borderRadius": "15",
+      "key": "f74d1e1690e6432d801e97fa2f05a162"
+    }
+  }
+</script>
+<script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
+
+            </div>
+        
+</div>
+<style>
+    .nexmoe-pd {
+        left: auto;
+        top: 40px;
+        right: 0;
+    }
+    .nexmoe-pd-item{
+       display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+</style>
+
+  </div>
+  <script src="https://lib.baomitu.com/lazysizes/5.1.0/lazysizes.min.js"></script>
+<script src="https://lib.baomitu.com/highlight.js/10.0.0/highlight.min.js"></script>
+<script src="https://lib.baomitu.com/mdui/0.4.3/js/mdui.min.js"></script>
+
+<script>
+	hljs.initHighlightingOnLoad();
+</script>
+
+<script src="https://lib.baomitu.com/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
+
+
+<script src="/js/app.js?v=1687603625095"></script>
+
+<script src="https://lib.baomitu.com/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
+</script>
+
+  
+
+
+
+
+
+<!-- hexo injector body_end start -->
+<script src="/js/clock.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script src="/js/search.js"></script>
+
+<script src="/js/webapp.js"></script>
+
+<script src="https://lib.baomitu.com/clipboard.js/2.0.8/clipboard.min.js"></script>
+
+<script src="/lib/codeBlock/codeBlockFuction.js"></script>
+
+<script src="/lib/codeBlock/codeLang.js"></script>
+
+<script src="/lib/codeBlock/codeCopy.js"></script>
+
+<script src="/lib/codeBlock/codeShrink.js"></script>
+
+<link rel="stylesheet" href="/lib/codeBlock/matery.css">
+<!-- hexo injector body_end end --></body>
+</html>
+
+<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/250cb4aa.js","daovoice")</script>
+<script>
+  daovoice('init', {
+    app_id: "250cb4aa"
+  });
+  daovoice('update');
+</script>
+
